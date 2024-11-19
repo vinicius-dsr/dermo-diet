@@ -1,11 +1,66 @@
 ---
-
+const testimonials = [
+  {
+    name: "Testemunho",
+    image: "/test.jpeg",
+  },
+  {
+    name: "Testemunho 1",
+    image: "/test-1.jpeg",
+  },
+  {
+    name: "Testemunho 3",
+    image: "/test-3.jpeg",
+  },
+  {
+    name: "Testemunho 4",
+    image: "/test-4.jpeg",
+  },
+  {
+    name: "Testemunho 5",
+    image: "/test-5.jpeg",
+  },
+  {
+    name: "Testemunho 6",
+    image: "/test-6.jpeg",
+  },
+  {
+    name: "Testemunho 9",
+    image: "/test-9.jpeg",
+  },
+  {
+    name: "Testemunho 11",
+    image: "/test-11.jpeg",
+  },
+  {
+    name: "Testemunho 13",
+    image: "/test-13.jpeg",
+  },
+];
 ---
 
-<section class="py-20 bg-light">
-  <div class="container mx-auto px-4 mt-10">
-    <h2 class="text-4xl font-bold text-center mb-12 text-secondary">
-      Quem usa aprova!
-    </h2>
+<section class="py-20 bg-light" id="sobre">
+  <div class="container mx-auto px-4 mt-10 flex flex-col gap-8">
+    <div class="flex flex-col gap-6">
+      <h2 class="text-4xl font-bold text-center text-secondary">
+        Quem usa aprova!
+      </h2>
+      <span class="text-lg text-center mb-5 font-medium"
+        >Pra que gastar dinheiro com vários procedimentos caros se você pode ter
+        um resultado extraordinário com o Dermo Diet?</span
+      >
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        testimonials.map((test) => (
+          <img
+            src={test.image}
+            alt={test.name}
+            class="w-full md:h-50 h-auto object-cover"
+          />
+        ))
+      }
+    </div>
   </div>
 </section>
