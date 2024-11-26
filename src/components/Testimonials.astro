@@ -56,8 +56,16 @@ const testimonials = [
       >
     </div>
 
-    <div class="mx-auto max-w-screen-lg">
+    <div class="mx-auto max-w-screen-lg space-y-4">
       <TestiCarousel client:load />
+      <span
+        class="md:hidden text-center justify-center flex text-zinc-700 font-medium gap-4 items-center"
+        >Arreste para o lado <img
+          src="/right-arrow.png"
+          alt="Arraste para o lado"
+          class="w-5"
+        />
+      </span>
     </div>
 
     <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
