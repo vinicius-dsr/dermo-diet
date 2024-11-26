@@ -1,4 +1,6 @@
 ---
+import TestiCarousel from "./TestiCarousel";
+
 const testimonials = [
   {
     name: "Testemunho",
@@ -42,27 +44,32 @@ const testimonials = [
 <section class="py-20 bg-light" id="sobre">
   <div class="container mx-auto px-4 mt-10 flex flex-col gap-8">
     <div class="flex flex-col gap-6">
-      <h2 class="text-4xl text-center text-zinc-800">
+      <h2 class="md:text-4xl text-2xl text-center text-zinc-800">
         Resultados <span class="font-bold">Reais</span> de <span
           class="font-bold">Pessoas Reais!</span
         >
       </h2>
-      <span class="text-lg text-center mb-5 font-medium"
+      <span
+        class="md:text-lg text-base text-center mb-5 font-medium text-zinc-700 max-w-4xl mx-auto"
         >Pra que gastar dinheiro com vários procedimentos caros se você pode ter
         um resultado extraordinário com o Dermo Diet?</span
       >
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {
-        testimonials.map((test) => (
-          <img
-            src={test.image}
-            alt={test.name}
-            class="w-full md:max-h-[500px] h-auto object-cover drop-shadow-md"
-          />
-        ))
-      }
+    <div class="mx-auto max-w-screen-lg">
+      <TestiCarousel client:load />
     </div>
+
+    <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {
+      testimonials.map((test) => (
+        <img
+          src={test.image}
+          alt={test.name}
+          class="w-full md:max-h-[500px] h-auto object-cover drop-shadow-md"
+        />
+      ))
+    }
+  </div> -->
   </div>
 </section>
