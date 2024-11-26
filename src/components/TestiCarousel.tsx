@@ -55,7 +55,7 @@ export default function TestiCarousel() {
 			<CarouselContent className="">
 				{testimonials.map((testimonial) => (
 					<CarouselItem key={testimonial.name} className="md:basis-1/3">
-						<div className="rounded-md md:h-auto h-[650px] w-[90%] md:w-full mx-auto">
+						<div className="rounded-md md:h-full h-[650px] w-full mx-auto">
 							<img
 								src={testimonial.image}
 								alt={testimonial.name}
