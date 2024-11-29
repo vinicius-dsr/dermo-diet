@@ -4,6 +4,7 @@ const products = [
     name: "Dermo Diet - 15 cápsulas",
     price: "R$ 167,00",
     discountPrince: "R$ 209,00",
+    quantity: 1,
     description:
       "Suplemento 100% natural auxilia no metabolismo de proteínas, carboidratos e gorduras (15 cápsulas)",
     image: "/image.jpeg",
@@ -12,6 +13,7 @@ const products = [
     name: "Dermo Diet - 30 cápsulas",
     price: "R$ 267,00",
     discountPrince: "R$ 410,00",
+    quantity: 1,
     description:
       "Suplemento 100% natural auxilia no metabolismo de proteínas, carboidratos e gorduras (30 cápsulas)",
     image: "/image.jpeg",
@@ -20,6 +22,7 @@ const products = [
     name: "Dermo Diet - 60 cápsulas",
     price: "R$ 427,00",
     discountPrince: "R$ 836,00",
+    quantity: 0,
     description:
       "Suplemento 100% natural auxilia no metabolismo de proteínas, carboidratos e gorduras (60 cápsulas)",
     image: "/image.jpeg",
@@ -28,6 +31,7 @@ const products = [
     name: "Dermox Premium",
     price: "R$ 157,00",
     discountPrince: "R$ 209,00",
+    quantity: 1,
     description:
       "Atua diretamente na desintoxicação do organismo, ajudando a eliminar toxinas e reduzir inflamações",
     image: "/image2.jpeg",
@@ -63,12 +67,18 @@ const whatsappLink =
                   {product.discountPrince}
                 </p>
               </div>
-              <a
-                href={`${whatsappLink}${product.name}`}
-                class="block w-full bg-accent text-white text-center py-3 rounded-lg font-semibold hover:bg-accent/90 transition-colors"
-              >
-                Pedir no WhatsApp
-              </a>
+              {product.quantity === 0 ? (
+                <p class="w-full text-center py-3 uppercase text-red-600 font-bold">
+                  Esgotado !
+                </p>
+              ) : (
+                <a
+                  href={`${whatsappLink}${product.name}`}
+                  class="block w-full bg-accent text-white text-center py-3 rounded-lg font-semibold hover:bg-accent/90 transition-colors"
+                >
+                  Pedir no WhatsApp
+                </a>
+              )}
             </div>
           </div>
         ))
